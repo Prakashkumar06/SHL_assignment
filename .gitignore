@@ -1,3 +1,26 @@
+# Virtual environments
 myenv/
+venv/
+.venv/
+
+# Environment variable files (never push secrets)
 .env
+*.env
+
+# Python cache
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# FAISS or model temp files (safe precaution)
+*.npy
+*.npz
+
+# DO NOT ignore .streamlit/  ← IMPORTANT
+# Streamlit cache folder to ignore (NOT config)
+.streamlit/cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
