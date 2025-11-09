@@ -2,9 +2,6 @@ from groq import Groq
 import os
 import re
 import pandas as pd
-from dotenv import load_dotenv
-
-load_dotenv()
 
 API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=API_KEY) if API_KEY else None

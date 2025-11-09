@@ -4,4 +4,4 @@ faiss-cpu
 sentence-transformers
 numpy
 groq
-python-dotenv
+
