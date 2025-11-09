@@ -45,12 +45,12 @@ def rerank_candidates(user_query: str, candidates: pd.DataFrame) -> int:
     Falls back to 1 if Groq is unavailable or parsing fails.
     """
     if not groq_available():
-        return 1  # =>> fallback: faiss top-1
+        return 1  
 
-    # Create a numbered list with ONLY the info we want the model to consider
+    
     lines = []
     for i, row in candidates.reset_index(drop=True).iterrows():
-        # We pass the catalog "Query" and the URL; the model will choose best number
+        
         lines.append(f"{i+1}. Query: {row['Query']}\n   URL: {row['Assessment_url']}")
     catalog_block = "\n".join(lines)
 

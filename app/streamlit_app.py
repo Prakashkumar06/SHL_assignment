@@ -45,7 +45,9 @@ if st.button("Recommend", type="primary"):
         st.markdown("---")
         st.subheader("Top-3 Sugesstions(you can check this also-->>)")
         top3 = cands.head(3).copy()
-        # Emphasize the winner
+        
+
+        
         for i, row in top3.reset_index(drop=True).iterrows():
             bullet = "TOP" if (i + 1) == best_idx_1based else "•"
             st.markdown(
@@ -55,4 +57,4 @@ if st.button("Recommend", type="primary"):
             )
 
 st.markdown("---")
-st.caption("Make sure to run `python src/build_index.py` before using the tool.")
+st.caption("We can make the recommendation more Accurate but i am using all the FREE resources and basics version, with limited 0.1cpu usages on RENDER, that why sometime you get wrong suggestion but i try my best. Thank you! ")
